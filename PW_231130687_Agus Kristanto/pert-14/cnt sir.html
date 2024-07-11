@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Produk Baru PT. ABC</h1>
+    <h2>Form Pendaftaran</h2>
+    <form id="formDaftar">
+        <table>
+            <tr>
+                <td>Nama:</td>
+                <td><input type="text" name="nama" id="nama" minlength="4" maxlength="8" ></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password" id="password"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button id="tombol" type="submit">
+                        Daftar
+                    </button></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        var button = document.getElementById("tombol");
+        var form = document.getElementById("formDaftar");
+        var nama = document.getElementById("nama");
+        var email = document.getElementById("email");
+        var password = document.getElementById("password");
+        
+
+        function validasi() {
+            let a = nama.value.trim();
+            let b = email.value.trim();
+            let c = password.value.trim();
+
+            if (a == "") {
+                console.log("Nama Tidak boleh kosong");
+            }
+            if (b == "") {
+                console.log("Email Tidak boleh kosong");
+            }
+            if (c == "") {
+                console.log("Password Tidak boleh kosong");
+            }
+            button.addEventListener("click", validasi());
+        }
+    </script>
+</body>
+
+</html>

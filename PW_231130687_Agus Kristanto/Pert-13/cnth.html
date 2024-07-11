@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pilih Browser :</h1>
+    <select id="data" name="browser" onchange="fungsisaja()">
+        <option value="ie">Internet Explorer</option>
+        <option value="chrome">Google Chrome</option>
+        <option value="firefox">Firefox</option>
+    </select><br><br>
+    <img id="gambar" src="./ie.png" alt="Gambar Produk">
+    <p id="teks">Anda Memilih Internet Explorer</p>
+    <script>
+        function fungsisaja() {
+            var dd = document.getElementById("data").value;
+            var img = document.getElementById("gambar");
+            var p = document.getElementById("teks");
+
+            if (dd == "ie") {
+                img.src = "./ie.png";
+                p.innerHTML = "Anda memilih Internet Explore"
+            } else if (dd == "chrome") {
+                img.src = "./gambar/chrome.png";
+                p.innerHTML = "Anda memilih Chrome"
+            } else if (dd == "firefox") {
+                img.src = "./firefox.png";
+                p.innerHTML = "Anda memilih Firefox"
+            }
+        }
+    </script>
+</body>
+
+</html>

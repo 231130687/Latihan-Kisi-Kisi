@@ -1,0 +1,32 @@
+Latihan Pert-07:
+1. Copy kembali kode kalian yang ada pada Pertemuan-05 ke dalam folder Pert-07
+NB: Hanya copy file html dan css saja serta pastikan di dalam folder Pert-07 tidak ada modul pdf kalian.
+2. Ubah semua elemen video maupun audio menjadi image
+3. Gunakan gambar yang disediakan oleh dosen.
+> Silahkan pilih salah satu dari 2 gambar berikut ini:
+- Link Gambar 1: https://bit.ly/GbrLat-07_PW
+- Link Gambar 2: https://bit.ly/GbrLat-07_PW1
+4. Sesuaikan ukuran gambar menjadi width 400px height 300px
+5. Update warna dan tampilan menjadi lebih menarik.
+6. Ubah juga setiap gambar yang ada, menjadi gambar yang diberikan oleh dosen.
+
+
+7. Login ke dalam akun github kalian masing-masing
+8. Buat sebuah repository dengan nama repository berupa: [nama depan]_PW7
+Contoh: apriyanto_PW7
+9. Buka git bash yang ada pada komputer lab
+10. Lakukan konfigurasi dasar terhadap git bash berupa:
+- menambahkan username
+- menambahkan email
+- menambahkan remote dengan nama origin, dan hubungan dengan repository yang sudah kalian buat sebelumnya
+11. Lakukan clone terlebih dahulu dengan repository global
+12. Tambahkan semua file yang telah kalian lakukan pada tahapan 1 s.d. 6
+13. Lakukan commit dengan pesan = "Tugas Praktek Pertemuan-07"
+14. Lakukan push ke dalam repository global
+15. Pastikan di dalam github repository hanya ada 4 buah file, yaitu:
+- README.md
+- index.html
+- gaya.css
+- gambar.jpg
+16. Lampirkan link github repository global kalian pada "Tempat Pengumpulan Praktek Pert-07" yang ada di Teams.
+17. Jika sudah melakukan tahapan diatas, silahkan laporkan kepada dosen.

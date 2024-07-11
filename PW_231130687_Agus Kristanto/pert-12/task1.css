@@ -1,0 +1,47 @@
+header{
+    width: 1200px;
+}
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+th.p,
+td.p {
+    color: white;
+    border: 0px solid white;
+    padding: 5px 10px;
+}
+
+.kiri{
+    border-left: white;
+}
+.kanan{
+    border-right: white;
+}
+.a{
+    border-bottom: white;
+}
+.b{
+    border-top: white;
+}
+.sales{
+    text-align: 80px;
+}
+th ,td:first-child{
+    text-align: center;
+}
+
+.pp{
+    text-align: left;
+    padding: 0px;
+}
+.kiri{
+    text-align: right;
+    padding: 0px;
+}

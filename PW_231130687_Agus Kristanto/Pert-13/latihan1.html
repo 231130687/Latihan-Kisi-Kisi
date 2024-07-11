@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Daftar Belanja</h1>
+    <nav>
+        <ul id="unorder">
+            <li>Apel</li>
+            <li>Pisang</li>
+            <li>Jeruk</li>
+            <li>Apel2</li>
+        </ul>
+    </nav><br>
+    <button id="tombol" onclick="tambah()">Tambah Item</button>
+    <button id="tombolHapus">Hapus Item</button>
+    <script>
+        document.getElementById("tombol").addEventListener("click", function () {
+            var item = prompt("Masukkan item belanjaan");
+            if (item) {
+                var li = document.createElement("li");
+                li.textContent = item;
+                document.getElementById("unorder").appendChild(li);
+            }
+        });
+        document.getElementById("tombolHapus").addEventListener("click", function () {
+            var item = prompt("Masukkan item belanjaan yang ingin dihapus");
+            if (item) {
+                var ul = document.getElementById("unorder");
+                var items = ul.getElementsByTagName("li");
+                for (var i = 0; i < items.length; i++) {
+                    if (items[i].textContent === item) {
+                        ul.removeChild(items[i]);
+                        break;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

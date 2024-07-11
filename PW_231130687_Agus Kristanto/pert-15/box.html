@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#loadButton").click(function () {
+          $.ajax({
+            url: "data.json",
+            method: "GET",
+            dataType: "json",
+            success: function (response) {
+              var listHtml = "";
+              $.each(response, function (index, mahasiswa) {
+                listHtml +=
+                  "<li data-usia='" +
+                  mahasiswa.usia +
+                  "'>" +
+                  mahasiswa.nama +
+                  " - " +
+                  mahasiswa.Jurusan +
+                  "</li>";
+              });
+              $("#dataContainer").html("<ul>" + listHtml + "</ul>");
+            },
+            error: function (xhr, status, error) {
+              console.log("Terjadi Kesalahan: " + error);
+            },
+          });
+          $(document).on("click", "#dataContainer li", function () {
+            var usia = $(this).data("usia");
+            alert("Usia Mahasiswa: " + usia);
+          });
+        });
+      });
+    </script>
+  </head>
+ 
+  <body>
+    <h1>Tampilan Data Json dalam list HTML</h1>
+    <button id="loadButton">Tampilkan Data</button>
+    <div id="dataContainer"></div>
+  </body>
+</html

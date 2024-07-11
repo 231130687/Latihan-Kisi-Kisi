@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PT.ABC - TI-A</h1>
+        </div>
+        <div class="nav">
+            <div class="item">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+            </div>
+        </div>
+        <div class="section">
+            <div class="content">
+                <h1>Produk Baru PT. ABC</h1>
+                <h2>Form Pendaftaran</h2>
+                <table>
+                    <form action="#" method="post">
+                        <tr>
+                            <td>Nama:</td>
+                            <td><input type="text" id="nameInput"></td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td><input type="email" id="emailInput"></td>
+                        </tr>
+                        <tr>
+                            <td>Password:</td>
+                            <td><input type="password" id="passwordInput"></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button id="submitButton">Daftra</button></td>
+                        </tr>
+                    </form>
+                </table>
+                <div id="hasil">
+                    <!-- Hasil table akan masuk dibagian ini -->
+                </div>
+            </div>
+            <div class="aside">
+                <div class="item">
+                    <div class="cal">
+                        <p>Calender</p>
+                    </div>
+                    <div class="iklan">
+                        <p>Iklan</p>
+                    </div>
+                    <div class="iklan">Iklan</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            footer
+        </div>
+    </div>
+    <script>
+        var submitButton = document.getElementById("submitButton");
+
+        submitButton.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            var nameInput = document.getElementById("nameInput");
+            var emailInput = document.getElementById("emailInput")
+            var passwordInput = document.getElementById("passwordInput");
+
+            var name = nameInput.value.trim();
+            var email = emailInput.value.trim();
+            var password = passwordInput.value.trim();
+
+            if (name !== " && email !== " && password !== "") {
+                var table = document.createElement("table");
+                var row1 = table.insertRow();
+                var cell1 = row1.insertCell();
+                var cell2 = row1.insertCell();
+                var row2 = table.insertRow();
+                var cell3 = row2.insertCell();
+                var cell4 = row2.insertCell();
+                var row3 = table.insertRow();
+                var cell4 = row3.insertCell();
+                var cell5 = row3.insertCell();
+
+                cell1.textContent = "Nama:";
+                cell2.textContent = name;
+                cell3.textContent = "Email:";
+                cell4.textContent = email;
+                cell5.textContent = "Password";
+                cell6.textContent = "******";
+
+                document.getElementById("hasil").appendChild(table);
+
+                nameInput.value = "";
+                emailInput.value = "";
+                passwordInput.value = "";
+            } else {
+                alert("Mohon lengkapi semua field.");
+            }
+        })
+    </script>
+</body>
+
+</html>
